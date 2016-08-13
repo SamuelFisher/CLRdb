@@ -1,6 +1,8 @@
 CLRdb
 =====
 
+[![Build Status](https://travis-ci.org/SamuelFisher/CLRdb.svg?branch=master)](https://travis-ci.org/SamuelFisher/CLRdb)
+
 CLRdb is a Redis RDB file parser for .NET.
 
 ## Installation
