@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CLRdb</id>
+    <version>0.1-beta</version>
+    <title>CLRdb</title>
+    <authors>Samuel Fisher</authors>
+    <owners>Samuel Fisher</owners>
+    <licenseUrl>https://raw.githubusercontent.com/SamuelFisher/CLRdb/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/SamuelFisher/CLRdb</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Redis DB file parser for .NET.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\CLRdb.dll" target="lib\netstandard1.0" />
+  </files>
+</package>

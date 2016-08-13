@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "exports": {
+    "CLRdb/1.0.0": {
+      "type": "project",
+      "framework": ".NETStandard,Version=v1.0",
+      "compile": {
+        "bin/Release/CLRdb.dll": {}
+      },
+      "runtime": {
+        "bin/Release/CLRdb.dll": {}
+      }
+    }
+  }
+}
