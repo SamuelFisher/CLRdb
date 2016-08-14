@@ -1,4 +1,4 @@
-﻿// Redis DB file parser for .NET https://github.com/SamuelFisher/CLRdb
+﻿// Redis RDB file parser for .NET https://github.com/SamuelFisher/CLRdb
 //
 // Copyright(C) 2016 Samuel Fisher
 //

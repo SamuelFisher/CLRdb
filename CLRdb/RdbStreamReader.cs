@@ -1,4 +1,4 @@
-﻿// Redis DB file parser for .NET https://github.com/SamuelFisher/CLRdb
+﻿// Redis RDB file parser for .NET https://github.com/SamuelFisher/CLRdb
 //
 // Copyright(C) 2016 Samuel Fisher
 //
@@ -84,14 +84,21 @@ namespace CLRdb
                     int expiryHashTableSize = reader.ReadVariableLengthInt32();
                     break;
                 }
-                case RdbField.DatabaseSelector:
-                {
-                    Database = reader.ReadVariableLengthInt32();
-                    break;
-                }
                 case RdbField.ExpireTimeMilliseconds:
                 {
                     reader.ReadBytes(8); // Unix timestamp expiry
+                    ReadKeyValue((RdbValue)reader.ReadByte());
+                    break;
+                }
+                case RdbField.ExpireTime:
+                {
+                    reader.ReadBytes(8); // Unix timestamp expiry
+                    ReadKeyValue((RdbValue)reader.ReadByte());
+                    break;
+                }
+                case RdbField.DatabaseSelector:
+                {
+                    Database = reader.ReadVariableLengthInt32();
                     break;
                 }
                 case RdbField.EndOfFile:
@@ -128,6 +135,8 @@ namespace CLRdb
                     string valueString = Encoding.UTF8.GetString(value, 0, value.Length);
                     Current = new KeyValuePair<string, string>(keyString, valueString);
                     break;
+                default:
+                    throw new NotSupportedException();
             }
         }
 
